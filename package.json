@@ -8,6 +8,9 @@
   "bugs": {
     "url": "https://github.com/dgoguerra/parse-repo/issues"
   },
+  "scripts": {
+    "test": "node_modules/.bin/tape test.js"
+  },
   "devDependencies": {
     "tape": "^4.5.1"
   }
