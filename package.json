@@ -5,6 +5,18 @@
   "author": "Diego Guerra <dgoguerra.or@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dgoguerra/parse-repo",
+  "keywords": [
+    "parse",
+    "repository",
+    "repo",
+    "uri",
+    "github",
+    "bitbucket"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgoguerra/parse-repo.git"
+  },
   "bugs": {
     "url": "https://github.com/dgoguerra/parse-repo/issues"
   },
