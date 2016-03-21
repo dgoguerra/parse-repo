@@ -1,6 +1,6 @@
 {
   "name": "parse-repo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Extract repository info from a git remote URI",
   "author": "Diego Guerra <dgoguerra.or@gmail.com>",
   "license": "MIT",
