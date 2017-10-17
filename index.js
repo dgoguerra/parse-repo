@@ -1,13 +1,13 @@
 var path = require('path');
 
 function parseRemoteUri(remoteUri) {
-    var gitRemote = /^git@([^:]+):([^\.]+)(\.git)?$/,
-        httpRemote = /^(https?):\/\/([^@]+@)?([^\/]+)\/([^\.]+)(\.git)?$/;
+    var gitRemote = /^git@([^:]+):(.+\/.+)$/,
+        httpRemote = /^(https?):\/\/([^@]+@)?([^\/]+)\/(.+)$/;
 
     var matches = null;
 
     if (matches = gitRemote.exec(remoteUri)) {
-        var repository = matches[2],
+        var repository = matches[2].replace(/\.git$/, ''),
             splitRepo = repository.split('/');
 
         return {
@@ -21,7 +21,7 @@ function parseRemoteUri(remoteUri) {
     }
 
     if (matches = httpRemote.exec(remoteUri)) {
-        var repository = matches[4],
+        var repository = matches[4].replace(/\.git$/, ''),
             splitRepo = repository.split('/');
 
         return {

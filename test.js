@@ -29,6 +29,24 @@ tape('github remotes', function(t) {
         project: 'docs'
     });
 
+    t.deepEqual(parseRepo('git@github.com:simshanith/pi.simloovoo.com.git'), {
+        remote: 'git@github.com:simshanith/pi.simloovoo.com.git',
+        protocol: 'git',
+        host: 'github.com',
+        repository: 'simshanith/pi.simloovoo.com',
+        owner: 'simshanith',
+        project: 'pi.simloovoo.com'
+    });
+
+    t.deepEqual(parseRepo('https://github.com/simshanith/pi.simloovoo.com'), {
+        remote: 'https://github.com/simshanith/pi.simloovoo.com',
+        protocol: 'https',
+        host: 'github.com',
+        repository: 'simshanith/pi.simloovoo.com',
+        owner: 'simshanith',
+        project: 'pi.simloovoo.com'
+    });
+
     t.end();
 });
 
